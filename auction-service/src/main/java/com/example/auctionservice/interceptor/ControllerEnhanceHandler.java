@@ -1,5 +1,7 @@
 package com.example.auctionservice.interceptor;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,6 +16,9 @@ import javax.servlet.http.HttpServletResponse;
  */
 @Component
 public class ControllerEnhanceHandler implements HandlerInterceptor {
+
+    private static final Logger logger = LoggerFactory.getLogger(ControllerEnhanceHandler.class);
+
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         return false;
