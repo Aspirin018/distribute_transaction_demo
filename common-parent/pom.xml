@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>common-db</module>
+        <module>common-util</module>
     </modules>
     <packaging>pom</packaging>
 
