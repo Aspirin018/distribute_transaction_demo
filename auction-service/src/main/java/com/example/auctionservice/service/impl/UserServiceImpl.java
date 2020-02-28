@@ -1,6 +1,7 @@
 package com.example.auctionservice.service.impl;
 
 import com.example.auctionservice.dao.UserMapper;
+import com.example.auctionservice.entity.User;
 import com.example.auctionservice.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,4 +21,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
+
+    @Override
+    public boolean createUser(User user) {
+        return userMapper.createUser(user);
+    }
 }

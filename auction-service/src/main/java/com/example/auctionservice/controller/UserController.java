@@ -1,6 +1,8 @@
 package com.example.auctionservice.controller;
 
+import com.example.auctionservice.entity.User;
 import com.example.auctionservice.service.UserService;
+import org.example.common.util.web.ResponseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,4 +23,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    public ResponseResult createUser(User user){
+        return userService.createUser(user) ? ResponseResult.success() : ResponseResult.failed();
+    }
 }

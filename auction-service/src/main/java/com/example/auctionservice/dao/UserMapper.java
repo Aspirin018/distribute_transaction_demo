@@ -1,5 +1,6 @@
 package com.example.auctionservice.dao;
 
+import com.example.auctionservice.entity.User;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -9,4 +10,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UserMapper {
+
+    boolean createUser(User user);
 }
