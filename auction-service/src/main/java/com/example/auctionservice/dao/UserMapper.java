@@ -12,4 +12,6 @@ import org.springframework.stereotype.Repository;
 public interface UserMapper {
 
     boolean createUser(User user);
+
+    boolean updateUser(Long userId);
 }

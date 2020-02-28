@@ -10,4 +10,6 @@ import com.example.auctionservice.entity.User;
 public interface UserService {
 
     boolean createUser(User user);
+
+    boolean updateUser(Long userId);
 }

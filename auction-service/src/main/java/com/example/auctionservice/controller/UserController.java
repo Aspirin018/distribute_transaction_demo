@@ -6,6 +6,8 @@ import org.example.common.util.web.ResponseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +25,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @PostMapping("/create")
     public ResponseResult createUser(User user){
         return userService.createUser(user) ? ResponseResult.success() : ResponseResult.failed();
+    }
+
+    @PutMapping("/update")
+    public ResponseResult updateUser(Long userId){
+        return userService.updateUser(userId) ? ResponseResult.success() : ResponseResult.failed();
     }
 }
