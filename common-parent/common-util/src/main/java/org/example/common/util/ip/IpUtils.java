@@ -1,4 +1,4 @@
-package com.example.messagebroker.util;
+package org.example.common.util.ip;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;
@@ -29,5 +29,13 @@ public class IpUtils {
             throw new RuntimeException(e);
         }
         return null;
+    }
+
+    public static String getPlatformIp(){
+        InetAddress inetAddress = getPlatformInetAddress();
+        if (inetAddress != null){
+            return  inetAddress.getHostAddress();
+        }
+        return "127.0.0.1";
     }
 }

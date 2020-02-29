@@ -5,7 +5,7 @@ package org.example.common.db.redis;
  * @Author: liyu
  * @Date: 2020/2/29
  */
-public class ThreadMsgCacheKey {
+public class ThreadMsgCacheKey implements ICacheKey{
 
     private static final String SEPARATE = ":";
     private static final int EXPIRATIONTIME = 300;
@@ -25,15 +25,18 @@ public class ThreadMsgCacheKey {
         this.currentThreadName = currentThreadName;
     }
 
+    @Override
     public String getKey() {
         return prefix + SEPARATE + currentThreadName;
     }
 
-    public int getExpirationtime() {
+    @Override
+    public int getExpirationTime() {
         return EXPIRATIONTIME;
     }
 
-    public int getLocalcachetime() {
+    @Override
+    public int getLocalCacheTime() {
         return LOCALCACHETIME;
     }
 }

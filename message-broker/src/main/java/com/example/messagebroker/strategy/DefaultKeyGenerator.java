@@ -1,7 +1,7 @@
 package com.example.messagebroker.strategy;
 
-import com.example.messagebroker.util.WorkerIdUtils;
 import com.google.common.base.Preconditions;
+import org.example.common.util.ip.WorkerIdUtils;
 
 import java.util.Calendar;
 

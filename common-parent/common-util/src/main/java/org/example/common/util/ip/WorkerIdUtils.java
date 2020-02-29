@@ -1,4 +1,4 @@
-package com.example.messagebroker.util;
+package org.example.common.util.ip;
 
 import java.net.InetAddress;
 
